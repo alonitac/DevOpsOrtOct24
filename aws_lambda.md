@@ -83,4 +83,11 @@ Let's get started.
 2. Observe the Lambda invocation, as well as the state machine execution flow.
 3. Download the processes video from in "output" S3 bucket and watch the results.
 
+
+## Configure your S3 buckets 
+
+- Configure a lifecycle rule in your bucket to transfer the storage class of object to "Standard-IA" after 30 days.
+- Configure another rule to delete objects that are older than 90 days.
+
+
 [aws_face-blur]: img/aws_face-blur.png
