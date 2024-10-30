@@ -34,7 +34,9 @@ Let's get started.
 5. Copy and deploy `face-blur-lambdas/face-detection/*.py` in the function source code page. Using the console code editor to create new python files as needed.
 6. The IAM role of this function should have the following permissions: `AmazonS3FullAccess`, `AmazonRekognitionFullAccess` and `AWSStepFunctionsFullAccess`. It's recommended to use the same IAM role for all functions!
 7. Configure a trigger for an **All object create** events for a given S3 bucket on objects with `.mp4` suffix (create a bucket and enable event notification if needed).
-
+8. Add the following env var to the **face-detection** function:
+   `STATE_MACHINE_ARN=<state-machine-ARN>`.
+   The value of the `<state-machine-ARN>` will be available soon after you'll create it.
 
 #### Create the "check-rekognition-job-status" function
 
@@ -73,8 +75,7 @@ Let's get started.
     2. Change `<check-rekognition-job-status ARN>`, `<get-rekognized-faces ARN>` and `<blur-faces ARN>` according to the corresponding Lambda functions ARN.
 4. Click **Create**.
 6. It's recommended to enable **all logging** (can be done after the function is created).
-8. Add the following env var to the **face-detection** function (the first function you've created):
-   `STATE_MACHINE_ARN=<state-machine-ARN>`
+
 
 ### Test the system
 
