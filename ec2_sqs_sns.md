@@ -187,7 +187,7 @@ In our case, the subscribers are the SQS queues.
 
 ### Test the system using multiple queues
 
-1. Run the **NetflixFrontend** (either locally or in an EC2) while providing the `AWS_SNS_TOPIC` and the `AWS_REGION` environment variables.
+1. Run the **NetflixFrontend** (either locally or in an EC2) while providing the `AWS_SNS_TOPIC_ARN` and the `AWS_REGION` environment variables.
 2. Visit the app in your web browser, generate some **MovieDetailsViewedEvent** events by open the details pane window for some movies. 
 3. Make sure the event was published to your queue through the SNS topic. 
 4. Create another SQS queue and subscribe it to your topic.
