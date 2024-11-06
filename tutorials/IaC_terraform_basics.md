@@ -202,6 +202,12 @@ Make sure you are able to visit the app after applying your configurations.
 
 **Note:** Updates to the `user_data` argument for an existing instance will trigger a stop/start of the instance by default. 
 
+> [!NOTE]
+> The repos for the Netflix stack can be found here: 
+> - https://github.com/exit-zero-academy/NetflixMovieCatalog.git
+> - https://github.com/exit-zero-academy/NetflixFrontend
+> 
+> For more information see [SQS and SNS tutorial](../ec2_sqs_sns.md)
 
 ### :pencil2: Manage the `terraform.tfstate` file 
 
